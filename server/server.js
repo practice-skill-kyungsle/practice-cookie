@@ -17,10 +17,6 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-    console.log("res!");
-    // res.setHeader("Access-Control-Allow-origin", "*");
-
-    // 이렇게 하면 클라이언트에 심어짐?
     res.cookie("cookieName", "cookieValue");
     res.status(200).send({ data: "success" });
 });
