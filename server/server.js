@@ -7,12 +7,12 @@ const app = express();
 app.use(cookieParser());
 
 app.get("/", (req, res) => {
-    // read cookies
-    console.log(req.cookies);
+    res.setHeader("Access-Control-Allow-origin", "*");
 
-    // Set cookie
+    // 이렇게 하면 클라이언트에 심어짐?
     res.cookie("cookieName", "cookieValue");
-    res.send("Welcome My Book Comment Server!");
+    // console.log(res);
+    res.status(200).send({ data: "success" });
 });
 
 app.listen(HTTPS_PORT, () => console.log(`Example app listening on port ${HTTPS_PORT}!`));

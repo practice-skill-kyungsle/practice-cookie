@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const getCookie = () => {
+                fetch("http://localhost:3085/").then((res) => {
+                    console.log(document.cookie);
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <button onclick="getCookie()">getCookie</button>
+    </body>
+</html>
