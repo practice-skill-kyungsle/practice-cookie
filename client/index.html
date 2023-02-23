@@ -3,7 +3,7 @@
     <head>
         <script>
             const getCookie = () => {
-                fetch("http://localhost:3085/").then((res) => {
+                fetch("http://localhost:3085/", { credentials: "include" }).then((res) => {
                     console.log(document.cookie);
                 });
             };
